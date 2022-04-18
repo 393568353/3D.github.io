@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*div {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    margin: 25% auto;*/
+/*    background-color: bisque;*/
+/*    position: relative;*/
+
+/*}*/
+
+div ul {
+    list-style: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 15% auto;
+    transform-style: preserve-3d;
+    /*transform: rotateX(-30deg) rotateY(-80deg);*/
+    transform: rotateX(13deg);
+    animation: rotate linear 5s infinite;
+    /*background-color: aqua;*/
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(13deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(13deg) rotateY(360deg);
+    }
+}
+
+div ul li {
+    /*不加会散*/
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0.8;
+   transition: all 0.4s;
+}
+
+.OutImg {
+    width: 400px;
+    height: 400px;
+}
+
+div ul li:nth-child(1) {
+    transform: rotateY(0deg) translateZ(200px);
+}
+
+div ul li:nth-child(2) {
+    transform: translateZ(-200px) rotateY(180deg);
+}
+
+div ul li:nth-child(3) {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+
+div ul li:nth-child(4) {
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+div ul li:nth-child(5) {
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+div ul li:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(200px);
+}
+
+/*定义内六变形样式*/
+div ul li:nth-of-type(n+7) {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.InImg {
+    width: 200px;
+    height: 200px;
+}
+
+div ul li:nth-child(7) {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+div ul li:nth-child(8){
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+div ul li:nth-child(9){
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+div ul li:nth-child(10){
+    ransform: rotateY(90deg) translateZ(100px);
+}
+
+div ul li:nth-child(11){
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+div ul li:nth-child(12){
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+/*鼠标移入样式*/
+div ul:hover li:nth-child(1){
+    transform: rotateY(0deg) translateZ(400px);
+}
+
+div ul:hover li:nth-child(2) {
+    transform: translateZ(-400px) rotateY(180deg);
+}
+
+div ul:hover li:nth-child(3) {
+    transform: rotateY(-90deg) translateZ(400px);
+}
+
+div ul:hover li:nth-child(4) {
+    transform: rotateY(90deg) translateZ(400px);
+}
+
+div ul:hover li:nth-child(5) {
+    transform: rotateX(90deg) translateZ(400px);
+}
+
+div ul:hover li:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(400px);
+}
